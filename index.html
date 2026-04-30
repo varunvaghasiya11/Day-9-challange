@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="glass-panel">
+            <div class="search-box">
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="text" id="city-input" placeholder="Enter city name..." autocomplete="off">
+                <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            
+            <div id="weather-content" class="weather-content hidden">
+                <div class="weather-icon-container">
+                    <img id="weather-icon" src="" alt="Weather Icon">
+                </div>
+                <div class="temperature">
+                    <h1 id="temp">--</h1><span class="unit">°C</span>
+                </div>
+                <h2 id="city-name">--</h2>
+                <p id="weather-desc">--</p>
+                
+                <div class="weather-details">
+                    <div class="detail-card">
+                        <i class="fa-solid fa-water"></i>
+                        <div class="detail-info">
+                            <span id="humidity">--%</span>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <i class="fa-solid fa-wind"></i>
+                        <div class="detail-info">
+                            <span id="wind-speed">-- km/h</span>
+                            <p>Wind Speed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Fetching weather...</p>
+            </div>
+            
+            <div id="error-message" class="error-message hidden">
+                <p>City not found. Please try again.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
